@@ -12,9 +12,6 @@ public class PersonAnnotationAspect {
 
     @Before("@annotation(com.example.aop.annotations.Loggable)")
     public void aroundPersonAnnotation(){
-
         System.out.println("inside person annotation aspect ********");
-
-
     }
 }

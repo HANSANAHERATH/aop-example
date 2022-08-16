@@ -15,9 +15,7 @@ public class EmployeeDto {
         this.employeeId = employeeId;
     }
 
-    @Loggable
     public String getEmployeeName() {
-        System.out.println("get employee name ******* ");
         return employeeName;
     }
 

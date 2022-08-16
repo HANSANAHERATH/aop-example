@@ -1,5 +1,6 @@
 package com.example.aop.service;
 
+import com.example.aop.annotations.Loggable;
 import com.example.aop.dto.EmployeeDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -34,6 +35,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
+    @Loggable(key = "test")
     public void deleteByName(EmployeeDto employeeDto){
         String employeeName = employeeDto.getEmployeeName();
         System.out.println(employeeName);
