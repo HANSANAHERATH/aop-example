@@ -8,4 +8,6 @@ public interface EmployeeService {
     EmployeeDto saveEmployee(EmployeeDto employeeDto);
 
     EmployeeDto updateEmployee(EmployeeDto employeeDto, Integer employeeId);
+
+    void deleteByName(EmployeeDto employeeDto);
 }

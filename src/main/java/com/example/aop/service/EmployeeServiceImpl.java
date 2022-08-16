@@ -32,4 +32,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeDto1.setEmployeeId(123456);
         return employeeDto1;
     }
+
+    @Override
+    public void deleteByName(EmployeeDto employeeDto){
+        String employeeName = employeeDto.getEmployeeName();
+        System.out.println(employeeName);
+    }
 }

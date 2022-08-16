@@ -39,4 +39,13 @@ public class EmployeeController {
         System.out.println("Inside uploadEmployeeController controller");
         return ResponseEntity.ok(employeeService.updateEmployee(employeeDto, employeeId));
     }
+
+    @DeleteMapping("/{employeeId}")
+    public void deleteEmployeeController(@PathVariable Integer employeeId) {
+        log.info("Inside deleteEmployeeController controller with payload : {}", employeeId);
+        EmployeeDto employeeDto = new EmployeeDto();
+        employeeDto.setEmployeeId(123456);
+        employeeDto.setEmployeeName("Hansana test");
+        employeeService.deleteByName(employeeDto);
+    }
 }

@@ -1,5 +1,7 @@
 package com.example.aop.dto;
 
+import com.example.aop.annotations.Loggable;
+
 public class EmployeeDto {
 
     private Integer employeeId;
@@ -13,7 +15,9 @@ public class EmployeeDto {
         this.employeeId = employeeId;
     }
 
+    @Loggable
     public String getEmployeeName() {
+        System.out.println("get employee name ******* ");
         return employeeName;
     }
 
